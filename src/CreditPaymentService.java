@@ -1,15 +1,6 @@
 public class CreditPaymentService {
     public int calculate(int amount, int year) {
-        int month = 0;
-        if (year == 1) {
-            month = 12;
-        }
-        if (year == 2) {
-            month = 24;
-        }
-        if (year == 3) {
-            month = 36;
-        }
+        int month = 12 * year;
 
         double ps = 9.99 / (100 * 12); //месячная процентная ставка;
         double a = 1 + ps;
